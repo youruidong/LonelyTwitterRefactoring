@@ -1,4 +1,4 @@
-package ca.ualberta.cs.lonelytwitter;
+package ca.ualberta.cs.coolvibe;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -13,7 +13,13 @@ public class NormalLonelyTweet implements Serializable {
 	public NormalLonelyTweet() {
 	}
 
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
+
 	public NormalLonelyTweet(String text, Date date) {
+
 		this.tweetDate = date;
 		this.tweetBody = text;
 	}
